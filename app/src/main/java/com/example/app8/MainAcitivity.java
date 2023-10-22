@@ -13,12 +13,13 @@ public class MainAcitivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth;
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
 
-            }
         }
+    }
 
-        
+
