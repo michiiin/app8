@@ -55,13 +55,15 @@ public class signinActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+                            // 회원가입 성공 시, 현재 사용자 정보 가져오기
                             FirebaseUser firebaseUser = mFirebaseAuth.getCurrentUser();
+                            // 사용자 계정 정보를 담는 객체 생성
                             UserAccount account = new UserAccount();
                             account.setEmailId(firebaseUser.getEmail());
                             account.setIdToken(firebaseUser.getUid());
                             account.setPassword(strPwd);
 
-
+                            // Firebase 실시간 데이터베이스에 사용자 정보 저장
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
 
                             Toast.makeText(signinActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();

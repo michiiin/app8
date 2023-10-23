@@ -88,6 +88,15 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.2.0")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition:16.1.3")
+    implementation ("com.google.firebase:firebase-ml-vision:24.0.3")
+    implementation("com.google.firebase:firebase-functions:20.4.0")
+    implementation("com.google.code.gson:gson:2.8.6")
+    implementation ("com.google.mlkit:text-recognition-korean:16.0.0-beta5")
+    implementation("com.google.mlkit:text-recognition-korean:16.0.0")
+    implementation("com.google.mlkit:text-recognition:16.0.0")
 
 
 }

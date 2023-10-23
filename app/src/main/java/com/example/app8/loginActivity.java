@@ -54,7 +54,7 @@ public class loginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             //로그인 성공
-                            Intent intent = new Intent(loginActivity.this, MainAcitivity.class);
+                            Intent intent = new Intent(loginActivity.this, MainActivity.class);
                             startActivity(intent);
                             finish();//현재 액티비티 파기
                         }else {
