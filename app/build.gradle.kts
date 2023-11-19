@@ -55,6 +55,8 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+
 }
 
 dependencies {
@@ -97,6 +99,8 @@ dependencies {
     implementation ("com.google.mlkit:text-recognition-korean:16.0.0-beta5")
     implementation("com.google.mlkit:text-recognition-korean:16.0.0")
     implementation("com.google.mlkit:text-recognition:16.0.0")
+    implementation ("com.google.android.material:material:1.10.0")
+
 
 
 }

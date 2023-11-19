@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.app8.ui.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -54,7 +53,7 @@ public class loginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             //로그인 성공
-                            Intent intent = new Intent(loginActivity.this, MainActivity.class);
+                            Intent intent = new Intent(loginActivity.this, ActivityMain.class);
                             startActivity(intent);
                             finish();//현재 액티비티 파기
                         }else {
