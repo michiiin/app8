@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".signinActivity">
 
+
     <EditText
         android:id="@+id/txt_email"
         android:layout_width="284dp"
@@ -14,25 +15,39 @@
         android:ems="10"
         android:hint="이메일을 입력하세요"
         android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/txt_pwd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.299"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
 
     <EditText
         android:id="@+id/txt_pwd"
-        android:layout_width="279dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="357dp"
+        android:layout_marginBottom="243dp"
         android:ems="10"
         android:hint="비밀번호를 입력하세요"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/signin_button"
+        app:layout_constraintEnd_toEndOf="@+id/txt_age"
+        app:layout_constraintStart_toStartOf="@+id/txt_age"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_age"
+        android:layout_width="284dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="420dp"
+        android:ems="10"
+        android:hint="나이를 입력하세요"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintHorizontal_bias="0.299"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/signin_button"
@@ -42,5 +57,6 @@
         android:text="가입 하기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pwd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

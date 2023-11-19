@@ -48,6 +48,12 @@ public class loginActivity extends AppCompatActivity {
                 String strEmail = txt_email.getText().toString();
                 String strPwd = txt_pwd.getText().toString();
 
+                // 입력값이 비어 있는지 확인
+                if (strEmail.isEmpty() || strPwd.isEmpty()) {
+                    Toast.makeText(loginActivity.this, "아이디와 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 mFirebaseAuth.signInWithEmailAndPassword(strEmail,strPwd).addOnCompleteListener(loginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -57,7 +63,7 @@ public class loginActivity extends AppCompatActivity {
                             startActivity(intent);
                             finish();//현재 액티비티 파기
                         }else {
-                            Toast.makeText(loginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(loginActivity.this, "로그인 실패: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

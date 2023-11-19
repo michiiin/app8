@@ -21,7 +21,7 @@ public class signinActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth; //파이어베이스 인증
     private DatabaseReference mDatabaseRef; // 실시간데이터베이스
-    private EditText txt_email,txt_pwd; // 회원가입 입력필드
+    private EditText txt_email,txt_pwd,txt_age; // 회원가입 입력필드
     private Button msignin_button; //회원가입 버튼
 
 
@@ -39,6 +39,8 @@ public class signinActivity extends AppCompatActivity {
 
         txt_email = findViewById(R.id.txt_email);
         txt_pwd = findViewById(R.id.txt_pwd);
+        txt_age = findViewById(R.id.txt_age);
+
         msignin_button = findViewById(R.id.signin_button);
 
         msignin_button.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +49,7 @@ public class signinActivity extends AppCompatActivity {
                 //회원가입 처리 시작
                 String strEmail = txt_email.getText().toString();
                 String strPwd = txt_pwd.getText().toString();
+                String strAge = txt_age.getText().toString();
 
 
                 //firebaseauth 진행
@@ -62,6 +65,8 @@ public class signinActivity extends AppCompatActivity {
                             account.setEmailId(firebaseUser.getEmail());
                             account.setIdToken(firebaseUser.getUid());
                             account.setPassword(strPwd);
+                            account.setAge(Integer.parseInt(strAge));// 나이를 정수로 변환하여 저장
+
 
                             // Firebase 실시간 데이터베이스에 사용자 정보 저장
                             mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
