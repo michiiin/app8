@@ -10,6 +10,24 @@ public class ProfileViewModel extends ViewModel {
         return profileImageUri;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void setProfileImageUri(Uri profileImageUri) {
         this.profileImageUri = profileImageUri;
     }

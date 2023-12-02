@@ -45,6 +45,7 @@ public class loginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //로그인 요청
+
                 String strEmail = txt_email.getText().toString();
                 String strPwd = txt_pwd.getText().toString();
 

@@ -4,19 +4,19 @@
         android:id="@+id/action_home"
         android:enabled="true"
         android:icon="@drawable/baseline_home_24"
-        android:title="Home"/>
+        android:title="홈"/>
 
     <item
         android:id="@+id/action_setting"
         android:enabled="true"
         android:icon="@drawable/baseline_settings_24"
-        android:title="Settings"/>
+        android:title="과자 리스트"/>
 
     <item
         android:id="@+id/action_user"
         android:enabled="true"
         android:icon="@drawable/baseline_supervised_user_circle_24"
-        android:title="User"/>
+        android:title="마이페이지"/>
 
 
 
