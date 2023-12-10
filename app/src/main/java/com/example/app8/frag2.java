@@ -125,11 +125,6 @@ public class frag2 extends Fragment {
                     adapter.setItems(search_list);
                 }
             }
-
-
-
-
-
         });
 
         return view;
