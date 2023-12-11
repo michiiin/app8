@@ -19,13 +19,24 @@
 
     <Button
         android:id="@+id/btn_update_profile"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:text="프로필 업데이트"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNickname" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="식품 업데이트"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toEndOf="@+id/btn_update_profile"
         app:layout_constraintTop_toBottomOf="@+id/editTextNickname" />
 
     <Button
@@ -39,7 +50,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_update_profile" />
 
-
+    <ListView
+        android:id="@+id/View"
+        android:layout_width="400dp"
+        android:layout_height="442dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update_profile"
+        tools:layout_editor_absoluteX="6dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

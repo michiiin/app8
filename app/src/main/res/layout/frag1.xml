@@ -1,34 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".frag1">
 
+
+    <EditText
+        android:id="@+id/listView"
+        android:layout_width="89dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="84dp"
+        android:hint="회사명"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/TN"
+        android:layout_width="251dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="152dp"
+        android:ems="10"
+        android:hint="제품명"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/listView" />
+
+    <EditText
+        android:id="@+id/TG"
+        android:layout_width="96dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:ems="10"
+        android:hint="그람"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/TN"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="118dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="환영합니다"
+        android:id="@+id/txtResult"
+        android:layout_width="258dp"
+        android:layout_height="91dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="148dp"
+        android:text="검색을 눌러주세요"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
 
     <Button
-        android:id="@+id/cameraButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="카메라"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btn1"
+        android:layout_width="112dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="256dp"
+        android:text="검색"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="112dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="68dp"
+        android:text="섬취"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
